@@ -1,6 +1,6 @@
 # movie-chain-game
 
-> A Vue.js project
+> A game built in Vue.js where players alternate between guessing actors in specific movies, and movies starring specific actors.
 
 ## Build Setup
 
