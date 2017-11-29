@@ -1,53 +1,48 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://gitter.im/vuejs/vue" target="_blank">Gitter Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-      <br>
-      <li><a href="http://vuejs-templates.github.io/webpack/" target="_blank">Docs for This Template</a></li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-    </ul>
+  <div class="container">
+    <div class="row">
+      <img class="logo" src="/static/images/logo.png">
+    </div>
+    <div class="row">
+      <h1 class="text">Welcome to the Movie Chain Game!</h1>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="row">
+      <button class="btn btn-lg" data-toggle="collapse" data-target="#rules">Rules</button>
+    </div>
+    <div class="row">
+      <div id="rules" class="collapse">
+        <h2 class="text">The object of the game is to extend the chain for as long as possible. You'll start with a movie. You must then name an actor in that movie. From there, you'll name another movie starring that actor, and so on.</h2>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="row">
+      <button class="btn btn-lg btn-launch-game" @click="goToSinglePlayer()">Single Player</button> <button class="btn btn-lg btn-launch-game" @click="goToMultiplayer()">Multiplayer</button>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: 'Home',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
+  methods: {
+    goToSinglePlayer () {
+      this.$router.push('/single')
+    },
+    goToMultiplayer () {
+      alert('Page not set up yet.')
     }
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}
+  .btn-launch-game {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 </style>

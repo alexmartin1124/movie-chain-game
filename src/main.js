@@ -5,7 +5,13 @@ import AppView from './App'
 import VueRouter from 'vue-router'
 import routes from './routes'
 
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+import VueCarousel from 'vue-carousel'
+
 Vue.use(VueRouter)
+Vue.use(VueAxios, axios)
+Vue.use(VueCarousel)
 
 Vue.config.productionTip = false
 
